@@ -28,7 +28,20 @@ For example:
 ```sh
 003020600900305001001806400008102900700000008006708200002609500800203009005010300
 ```
-
+corresponds to:
+```sh
+ .  .  3 | .  2  . | 6  .  . |
+ 9  .  . | 3  .  5 | .  .  1 |
+ .  .  1 | 8  .  6 | 4  .  . |
+- - - - -|- - - - -|- - - - -|
+ .  .  8 | 1  .  2 | 9  .  . |
+ 7  .  . | .  .  . | .  .  8 |
+ .  .  6 | 7  .  8 | 2  .  . |
+- - - - -|- - - - -|- - - - -|
+ .  .  2 | 6  .  9 | 5  .  . |
+ 8  .  . | 2  .  3 | .  .  9 |
+ .  .  5 | .  1  . | 3  .  . |
+```
 Potential Improvement
 --------------
 - We might take advantage of Rust's task to help speed up the process. For example, if one cell returns 89 after the first elimination. We know that either the answer should be 8 or 9 in this cell. We can then use task to help solve 2 paths: path 8 and path 9. 
